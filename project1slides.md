@@ -149,7 +149,7 @@ curl http://localhost/api/health.php
 ```
 ---
 
-# 🗄️ SQL Database Schema
+## SQL Database Schema
 
 - Database Name: **concerts_db**
 - User: **root**
@@ -184,6 +184,9 @@ curl http://localhost/api/health.php
        }
    ```
 3. Restart NGINX and visit `http://localhost:8081/venues.php`
+---
+## Example
+![alt text](../{27F66F1C-1F6E-4453-B76C-FC06CA03B709}.png)
 
 ---
 
