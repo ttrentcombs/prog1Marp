@@ -172,7 +172,7 @@ curl -H "Authorization: Bearer TOKEN" http://localhost/api/bookings.php
 ---
 ## NGINX Deployment (Tutorial)
 1. Copy `/api` folder to `/var/www/html/combsProject1`  
-2. Edit NGINX config:
+2. Edit NGINX config:s
    ```bash
    server {
        listen 8081;
