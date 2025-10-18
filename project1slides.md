@@ -192,3 +192,10 @@ curl -H "Authorization: Bearer TOKEN" http://localhost/api/bookings.php
 
 ## Thank You
 
+---
+### References
+1. Building REST API Server with PHP.md (slides 41, 36)
+2. Testing REST API Server(Slides 9,19, 15)
+3. Setting up NGINX for PHP( Slides 21,22, 24)
+   
+
