@@ -60,7 +60,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"username":"john","passwor
 ## Login and Token Example
 **Request**
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '{"username":"trent","password":"test123"}' http://localhost/api/login.php
+curl -X POST -H "Content-Type: application/json" -d '{"username":"john","password"}' http://localhost/api/login.php
 ```
 **Response**
 ```json
@@ -137,16 +137,6 @@ curl -H "Authorization: Bearer TOKEN" http://localhost/api/bookings.php
 ```json
 [{"concert":"Rock Night","date":"2025-11-01"}]
 ```
-
----
-## Health Check
-```bash
-curl http://localhost/api/health.php
-```
-**Response**
-```json
-{"status":"ok","time":"2025-10-15T12:00:00Z"}
-```
 ---
 
 ## SQL Database Schema
@@ -194,6 +184,10 @@ curl http://localhost/api/health.php
        }
    ```
 3. Restart NGINX and visit `http://localhost:8081/venues.php`
+---
+## NGINX Test Output
+![alt text](nginxtest-1.png)
+
 ---
 
 ## Thank You
