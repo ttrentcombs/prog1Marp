@@ -186,7 +186,7 @@ curl -H "Authorization: Bearer TOKEN" http://localhost/api/bookings.php
 3. Restart NGINX and visit `http://localhost:8081/venues.php`
 ---
 ## NGINX Test Output
-![alt text](nginxtest-1.png)
+![alt text](nginxtest.png)
 
 ---
 
