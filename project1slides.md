@@ -3,7 +3,7 @@ marp: true
 title: Concert REST API
 paginate: true
 ---
-# Concert Tickets REST API
+# Concert REST API
 ### ASE Project 1
 **Trent Combs**
 
@@ -49,7 +49,7 @@ Each table is linked using foreign keys for relationships.
 ## Register User Example
 **Request**
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '{"username":"trent","password":"test123"}' http://localhost/api/register.php
+curl -X POST -H "Content-Type: application/json" -d '{"username":"john","password":"password"}' http://localhost/api/register.php
 ```
 **Response**
 ```json
@@ -79,7 +79,7 @@ curl -H "Authorization: Bearer a7c8e9d4f2..." http://localhost/api/profile.php
 ## Add a Venue
 **Request**
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer TOKEN" -d '{"name":"Downtown Arena","city":"Orlando"}' http://localhost/api/venues.php
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer TOKEN" -d '{"name":"Arena","city":"Florida"}' http://localhost/api/venues.php
 ```
 **Response**
 ```json
@@ -93,14 +93,14 @@ curl http://localhost/api/venues.php
 ```
 **Response**
 ```json
-[{"id":1,"name":"Downtown Arena","city":"Orlando"}]
+[{"id":1,"name":"Fifth Third Arena","city":"Cincinnati"}]
 ```
 
 ---
 ## Add a Concert
 **Request**
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer TOKEN" -d '{"title":"Rock Night","venue_id":1,"date":"2025-11-01","price":35.00}' http://localhost/api/concerts.php
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer TOKEN" -d '{"title":"Mercedes Benz Stadium","venue_id":1,"date":"2025-11-01","price":35.00}' http://localhost/api/concerts.php
 ```
 **Response**
 ```json
@@ -157,6 +157,7 @@ curl http://localhost/api/health.php
   - `venues` — stores venue information
   - `concerts` — stores concert details
   - `tickets` — stores ticket data linked to concerts
+  - `users` - stores user information
 
 ---
 
@@ -165,6 +166,15 @@ curl http://localhost/api/health.php
 - **HTML Test Page:** `code/html_tests/html_test.html`  
 - **cURL Script:** `code/curl_tests/cURL_test.sh`  
 
+---
+## API Test Page Example
+---
+
+
+
+<div style="text-align:center;">
+  <img src="./apitestpage.png" alt="API Test Page" width="70%" style="border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,,0.3);" />
+</p>
 
 
 
@@ -184,10 +194,6 @@ curl http://localhost/api/health.php
        }
    ```
 3. Restart NGINX and visit `http://localhost:8081/venues.php`
----
-## Example
-![alt text](../{27F66F1C-1F6E-4453-B76C-FC06CA03B709}.png)
-
 ---
 
 ## Thank You
